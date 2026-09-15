@@ -224,8 +224,8 @@
   .dash-pane{display:none}.dash-pane.on{display:block}
   .empty{color:var(--slate);padding:26px;text-align:center;background:var(--white);border:1px dashed var(--line);border-radius:12px}
 </style></head><body><header class="nav"><div class="wrap nav-in"><a class="brand" href="index.html">Finvlo</a><nav class="nav-links"><a href="index.html">Home</a><a href="examples.html">Examples</a><a href="learn.html">Learn</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="account.html" class="nav-acc" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></a><a href="request.html" class="btn btn-primary btn-small">Request a score</a></nav></div></header><div class="page-hero"><div class="wrap"><p class="eyebrow">Account</p><h1 id="acc-h1">Your Finvlo account.</h1><p id="acc-sub">Log in or create an account.</p></div></div><section style="padding-top:20px"><div class="wrap" id="acc-root"></div></section><script>
-const SB_URL="PASTE_YOUR_SUPABASE_URL_HERE";
-const SB_KEY="PASTE_YOUR_ANON_PUBLIC_KEY_HERE";
+const SB_URL="https://qigpudyazwgfvtyjlnry.supabase.co/rest/v1/";
+const SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFpZ3B1ZHlhendnZnZ0eWpsbnJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0ODI2MDQsImV4cCI6MjEwNTA1ODYwNH0.wLir592VQh-ch5HSwGXrk4QRLFwiebK0mZ1hRE6VxF8";
 const sb=window.supabase.createClient(SB_URL,SB_KEY);
 function el(id){return document.getElementById(id);}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
