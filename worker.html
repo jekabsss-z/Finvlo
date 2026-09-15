@@ -224,8 +224,8 @@
   .dash-pane{display:none}.dash-pane.on{display:block}
   .empty{color:var(--slate);padding:26px;text-align:center;background:var(--white);border:1px dashed var(--line);border-radius:12px}
 </style></head><body><section style="padding:0"><div style="max-width:1120px;margin:0 auto;padding:0 24px"><div style="display:flex;align-items:center;justify-content:space-between;height:64px;border-bottom:1px solid var(--line)"><a class="brand" href="index.html">Finvlo <span style="font-family:var(--sans);font-size:13px;color:var(--slate);font-weight:600">Worker</span></a><a href="account.html" class="btn btn-ghost btn-small">Customer view</a></div><div id="w-root" style="padding:32px 0"></div></div></section><script>
-const SB_URL="PASTE_YOUR_SUPABASE_URL_HERE";
-const SB_KEY="PASTE_YOUR_ANON_PUBLIC_KEY_HERE";
+const SB_URL="https://qigpudyazwgfvtyjlnry.supabase.co/rest/v1/";
+const SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFpZ3B1ZHlhendnZnZ0eWpsbnJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0ODI2MDQsImV4cCI6MjEwNTA1ODYwNH0.wLir592VQh-ch5HSwGXrk4QRLFwiebK0mZ1hRE6VxF8";
 const sb=window.supabase.createClient(SB_URL,SB_KEY);
 function el(id){return document.getElementById(id);}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
