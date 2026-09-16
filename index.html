@@ -230,7 +230,7 @@ async function _s(k,v,sh){_mem[k+"|"+sh]=v;if(hasStore){try{await window.storage
 async function sGet(k,f){return _g(k,true,f);}
 async function sSet(k,v){return _s(k,v,true);}
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
-var OWNER_EMAIL="owner@finvlo.com";
+var OWNER_EMAIL="jzeilins.fin@outlook.com";
 async function getUsers(){return _g("finvlo:users",true,[]);}
 async function currentEmail(){return _g("finvlo:session",false,null);}
 async function isOwner(){var e=await currentEmail();return !!(e&&e.toLowerCase()===OWNER_EMAIL);}
