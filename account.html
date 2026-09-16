@@ -26,7 +26,7 @@
   .nav-acc{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);color:var(--navy);flex:0 0 auto}
   .nav-acc:hover{background:var(--pale);color:var(--blue)}
   .nav-acc svg{width:19px;height:19px}
-  @media(max-width:900px){.nav-links a:not(.btn){display:none}.nav-links a.nav-acc{display:grid}}
+  .navtoggle{display:none}.nav-burger{display:none;font-size:24px;background:none;border:none;cursor:pointer;color:var(--navy);line-height:1;padding:4px 8px}@media(max-width:900px){.nav-burger{display:block}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:6px 0;box-shadow:0 14px 26px -14px rgba(0,0,0,.22)}.navtoggle:checked~.nav-links{display:flex}.nav-links a:not(.btn){display:block;padding:13px 24px}.nav-links .btn{margin:10px 24px;text-align:center}.nav-acc{display:inline-grid;margin:6px 24px}}.svgchart{min-height:130px}@media(max-width:600px){section{padding:44px 0}.wrap{padding:0 18px}.hero{padding:40px 0 24px}.band-cta{padding:26px}.form-card{padding:22px}.dash-header{flex-wrap:wrap}}
   .page-hero{padding:52px 0 8px}
   .page-hero h1{font-size:clamp(30px,4.5vw,44px);color:var(--navy)}
   .page-hero p{color:var(--slate);font-size:18px;margin-top:12px;max-width:62ch}
@@ -223,9 +223,9 @@
   .dtab.on{color:var(--blue);border-bottom-color:var(--blue)}
   .dash-pane{display:none}.dash-pane.on{display:block}
   .empty{color:var(--slate);padding:26px;text-align:center;background:var(--white);border:1px dashed var(--line);border-radius:12px}
-</style></head><body><header class="nav"><div class="wrap nav-in"><a class="brand" href="index.html">Finvlo</a><nav class="nav-links"><a href="index.html">Home</a><a href="examples.html">Examples</a><a href="learn.html">Learn</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="account.html" class="nav-acc" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></a><a href="request.html" class="btn btn-primary btn-small">Request a score</a></nav></div></header><div class="page-hero"><div class="wrap"><p class="eyebrow">Account</p><h1 id="acc-h1">Your Finvlo account.</h1><p id="acc-sub">Log in or create an account.</p></div></div><section style="padding-top:20px"><div class="wrap" id="acc-root"></div></section><script>
-const SB_URL="https://qigpudyazwgfvtyjlnry.supabase.co/rest/v1/";
-const SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFpZ3B1ZHlhendnZnZ0eWpsbnJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0ODI2MDQsImV4cCI6MjEwNTA1ODYwNH0.wLir592VQh-ch5HSwGXrk4QRLFwiebK0mZ1hRE6VxF8";
+</style></head><body><header class="nav"><div class="wrap nav-in"><a class="brand" href="index.html">Finvlo</a><input type="checkbox" id="nvt" class="navtoggle"/><label for="nvt" class="nav-burger" aria-label="Menu">☰</label><nav class="nav-links"><a href="index.html">Home</a><a href="examples.html">Examples</a><a href="learn.html">Learn</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="account.html" class="nav-acc" aria-label="Account" title="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></a><a href="request.html" class="btn btn-primary btn-small">Request a score</a></nav></div></header><div class="page-hero"><div class="wrap"><p class="eyebrow">Account</p><h1 id="acc-h1">Your Finvlo account.</h1><p id="acc-sub">Log in or create an account.</p></div></div><section style="padding-top:20px"><div class="wrap" id="acc-root"></div></section><script>
+const SB_URL="PASTE_YOUR_SUPABASE_URL_HERE";
+const SB_KEY="PASTE_YOUR_ANON_PUBLIC_KEY_HERE";
 const sb=window.supabase.createClient(SB_URL,SB_KEY);
 function el(id){return document.getElementById(id);}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
